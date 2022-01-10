@@ -19,10 +19,10 @@ class FragmentA : Fragment(R.layout.fragment_a) {
         savedInstanceState: Bundle?){
         super.onViewCreated(view,savedInstanceState)
         val textFromArgument = arguments?.getString("String")
-        val tv_text = (R.id.tv_text) as TextView
+        val tv_text = view.findViewById<TextView>(R.id.tv_text)
         tv_text.text = textFromArgument
 
-        val button2 = R.id.button2 as Button
+        val button2 = view.findViewById<Button>(R.id.button2)
         button2.setOnClickListener{
             listener.showToast()}
 
